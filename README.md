@@ -57,7 +57,7 @@ In package.json add -   "homepage": "http://globalverified.github.io/react-itc" 
   "deploy": "gh-pages -d build"
 }
 $ git init
-$ git remote add origin https://github.com/account_name/repo_name.git
+git remote add origin https://github.com/globalverified/react-ts-demo.git
 $ npm run deploy
 
 $ git add .
