@@ -63,7 +63,5 @@ $ npm run deploy
 $ git add .
 $ git commit -m "Create a React app and publish it to GitHub Pages"
 $ git push origin master
-
 reference - https://github.com/gitname/react-gh-pages
-
 after next update - $ npm run deploy
