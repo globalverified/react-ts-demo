@@ -6,6 +6,7 @@ export function ToggleButton(){
     console.log('is checkbox checked',checked);
     return(
         <div>
+            <hr />
             {compTitle}
             <input type="checkbox" checked={checked}
             onChange={(e:any)=>toggleButton(e.target.checked)}/>

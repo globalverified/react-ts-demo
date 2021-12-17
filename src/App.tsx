@@ -1,8 +1,11 @@
 import React from 'react';
 import './App.css';
-import { LifeCycleMethods } from './components/LifeCycleMethods';
+import { CustomHooks } from './components/CustomHooks';
+import { LifeCycleMethods,  LifeCycleWithFunction} from './components/LifeCycleMethods';
 import { SumComponent } from './components/SumComponent'
 import { ToggleButton } from './components/ToggleButton';
+import { UseContextHook } from './components/UseContextHook';
+import { UseRefExample } from './components/UseRefExample';
 import { UserForm } from './components/UserForm';
 import { Welcome } from './components/Welcome';
 
@@ -21,6 +24,10 @@ function App() {
         <ToggleButton />
         <UserForm />
         <LifeCycleMethods initialVal={0}/>
+        <LifeCycleWithFunction initialVal={0}/>
+        <CustomHooks />
+        <UseRefExample />
+        <UseContextHook />
       </header>
       <footer>
         <a
