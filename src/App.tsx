@@ -1,15 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { SumComponent } from './components/SumComponent'
 
+function Sum(a: number, b: number) {
+  return a + b;
+}
 function App() {
+  const value = Sum(5, 4);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        Sum of two numbers via function: {value}
+        <SumComponent a={5} b={6} />
+
+      </header>
+      <footer>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -18,7 +23,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </footer>
     </div>
   );
 }
