@@ -13,10 +13,10 @@ export const MyDndComponent = () => {
     //     color: theme.palette.text.secondary,
     // }));
     const finalData = [
-        { id: 'one', name: 'MAYR Sagar', label: 'one Sagar' },
-        { id: 'two', name: 'MAYR ERSTE', label: 'one Kartik' },
-        { id: 'three', name: 'MAYR CREDITLAB', label: 'one Suresh' },
-        { id: 'four', name: 'MAYR ITC', label: 'one Ramesh' },
+        { id: 'one', name: 'MAYR ONE', label: 'one Sagar' },
+        { id: 'two', name: 'MAYR TWO', label: 'one Kartik' },
+        { id: 'three', name: 'MAYR THREE', label: 'one Suresh' },
+        { id: 'four', name: 'MAYR FOUR', label: 'one Ramesh' },
     ];
     const [data, setData] = useState(finalData);
     function handleOnDragEnd(res: any) {
@@ -33,27 +33,26 @@ export const MyDndComponent = () => {
     }
     return (
         <div>
-            this is my DndComponent
             <Grid container spacing={3} direction="row"
                 justifyContent="center"
-                alignItems="center" columns={11}>
+                alignItems="center" >
                 <DragDropContext onDragEnd={handleOnDragEnd}>
-                    <Droppable droppableId='mycards'>
+                    <Droppable droppableId='mycards' >
                         {(provided) => (
-                            <ol {...provided.droppableProps} ref={provided.innerRef}>
+                            <div {...provided.droppableProps} ref={provided.innerRef}>
                                 {data.map(
                                     ({ id, name, label }, index) => {
                                         return (
                                             <Draggable key={id} draggableId={id} index={index}>
                                                 {(provided) => (
-                                                    <li {...provided.draggableProps} ref={provided.innerRef} {...provided.dragHandleProps}>
+                                                    <div {...provided.draggableProps} ref={provided.innerRef} {...provided.dragHandleProps}>
                                                         {/* <div>{name}{label}</div> */}
-                                                        <Grid item xs={11}>
+                                                        <Grid item xs={12}>
                                                             <Card variant="outlined">
                                                                 <CardComponent name={name}/>
                                                             </Card>
                                                         </Grid>
-                                                    </li>
+                                                    </div>
                                                 )}
 
                                             </Draggable>
@@ -61,7 +60,7 @@ export const MyDndComponent = () => {
                                     }
                                 )}
                                 {provided.placeholder}
-                            </ol>
+                            </div>
                         )}
                     </Droppable>
                 </DragDropContext>

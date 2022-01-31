@@ -11,7 +11,6 @@ export const CardComponent = (props:any) => {
     return (
         <div>
             <Box sx={{ minWidth: 275 }}>
-                {/* <Card variant="outlined"> */}
                     <CardContent>
                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                             Mayr group
@@ -29,7 +28,6 @@ export const CardComponent = (props:any) => {
                     <CardActions>
                         <Button size="small">Learn More</Button>
                     </CardActions>
-                {/* </Card> */}
             </Box>
         </div>
     )
