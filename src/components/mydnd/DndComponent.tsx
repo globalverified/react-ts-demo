@@ -5,6 +5,14 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 import { CardComponent } from './CardComponent';
 
+interface TestRowProps {
+    xml: string;
+    desc: string;
+    output: string;
+    expectedOutput: string;
+    rowNumber: number;
+  }
+  
 export const MyDndComponent = () => {
     // const Item = styled(Paper)(({ theme }) => ({
     //     ...theme.typography.body2,
@@ -36,8 +44,8 @@ export const MyDndComponent = () => {
             <Grid container spacing={3} direction="row"
                 justifyContent="center"
                 alignItems="center" >
-                <DragDropContext onDragEnd={handleOnDragEnd}>
-                    <Droppable droppableId='mycards' >
+                <DragDropContext onDragEnd={handleOnDragEnd} >
+                    <Droppable droppableId='mycards' direction="horizontal" >
                         {(provided) => (
                             <div {...provided.droppableProps} ref={provided.innerRef}>
                                 {data.map(
